@@ -1,0 +1,44 @@
+
+
+[
+    { "author_id": "1",
+      "author_img": "https://i.ibb.co.com/HYsQrmC/boy2.jpg",
+      "author_name": "John Doe",
+      "cover_img": "https://i.ibb.co.com/1qhYL42/1.jpg",
+      "posted_date": "2024-10-15",
+      "reading_time": "5 min read",
+      "title": "The Future of AI in Everyday Life",
+      "hashtag": ["#AI", "#Technology", "#Future"]
+    },
+    {
+      "author_id": "2",
+      "author_img": "https://i.ibb.co.com/KLnDvYw/boy1.png",
+      "author_name": "Jane Smith",
+      "cover_img": "https://i.ibb.co.com/qkQYgxk/2.png",
+      "posted_date": "2024-10-18",
+      "reading_time": "8 min read",
+      "title": "10 Ways to Boost Your Productivity",
+      "hashtag": ["#Productivity", "#Work", "#LifeHacks"]
+    },
+    {
+      "author_id": "3",
+      "author_img": "https://i.ibb.co.com/H4mqG2h/girl1.jpg",
+      "author_name": "Mark Johnson",
+      "cover_img": "https://i.ibb.co.com/WcrwH9D/3.png",
+      "posted_date": "2024-09-30",
+      "reading_time": "7 min read",
+      "title": "The Rise of Electric Vehicles",
+      "hashtag": ["#ElectricCars", "#EV", "#GreenEnergy"]
+    },
+    {
+      "author_id": "4",
+      "author_img": "https://i.ibb.co.com/QjxMyxP/girl2.jpg",
+      "author_name": "Emily Davis",
+      "cover_img": "https://i.ibb.co.com/z2hVhW8/4.jpg",
+      "posted_date": "2024-10-10",
+      "reading_time": "6 min read",
+      "title": "Top 5 Vitamins for Healthy Hair",
+      "hashtag": ["#Vitamins", "#HairCare", "#Health"]
+    }
+  ]
+
