@@ -5,10 +5,10 @@ import Header from './my-components/header/Header'
 
 function App() {
   return (
-    <>
+    <div className='container mx-auto'>
       <Header></Header>
       <Blogs></Blogs>
-    </>
+    </div>
   )
 }
 
