@@ -1,9 +1,9 @@
-
+import React from 'react';
 
 const Bookmark = () => {
     return (
-        <div className="border border-orange-400 col-span-1">
-            <h2 className="text-lg">Bookmark</h2>
+        <div className='border border-blue-500 p-4'>
+            <h2>BookMarks</h2>
         </div>
     );
 };

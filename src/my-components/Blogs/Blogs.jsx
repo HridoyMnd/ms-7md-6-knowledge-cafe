@@ -1,25 +1,25 @@
 
-import { useEffect } from "react";
-import { useState } from "react";
-import Blog from "../Blog/Blog";
-import Bookmark from '../Bookmark/Bookmark'
 
-const Blogs = () => {
-    const [blogs, setBlogs] = useState([])
-    useEffect(() => {
-        fetch('blogs.json')
-            .then((res) => res.json())
-            .then((data) => setBlogs(data))
-    }, [])
+const Blogs = ({ blogs }) => {
+    console.log(blogs);
     return (
-        <div className="mt-7 grid grid-cols-3 gap-8">
-                <div className ="col-span-2 border-red-400 border">
-                {
-                    blogs.map(blog => <Blog key={blog.author_id} blog={blog}></Blog>)
-                }
-                </div>
-                <Bookmark></Bookmark>
-        </div>
+       <div className="col-span-2">
+            {
+                blogs.map((blog) => <div className="p-5 border rounded-lg border-red-400">
+                    <img src={blog.cover_img} alt="" className="rounded-lg" />
+                    <div className="mt-4 flex justify-between items-center">
+                        <div className="flex items-center gap-4">
+                        <img src={blog.author_img} className="w-16" alt="" />
+                        <div className="info">
+                            <h2>{blog.author_name}</h2>
+                            <h3>{blog.posted_date}</h3>
+                        </div>
+                        </div>
+                        <div className="time">{blog.reading_time}</div>
+                    </div>
+                </div>)
+            }
+       </div>
     );
 };
 
