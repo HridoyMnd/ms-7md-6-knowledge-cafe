@@ -5,14 +5,14 @@ import { useEffect, useState } from "react";
 function App() {
   const [blogs, setBlogs] = useState([])
   const [time, setTime] = useState(0)
-  // const [mark_read, setMarkRead] = useState([])
+  const [title, setTitle] = useState(null)
   useEffect(() => {
       fetch('blogs.json')
       .then((res) => res.json())
       .then((data) =>setBlogs(data))
   }, [])
-  const handleMarkRead = () =>{
-    console.log("Hello");
+  const handleMarkRead = (blog) =>{
+      setTitle(blog.title);
   }
  
   const handleReadTime = (blog) => {
@@ -22,7 +22,7 @@ function App() {
   return (
     <div className='container mx-auto grid grid-cols-3'>
       <Blogs blogs={blogs} handleReadTime={handleReadTime} handleMarkRead={handleMarkRead}></Blogs>
-      <Bookmark time={time}></Bookmark>
+      <Bookmark time={time} title={title}></Bookmark>
     </div>
   )
 }

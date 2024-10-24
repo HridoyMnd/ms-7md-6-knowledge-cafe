@@ -28,7 +28,7 @@ const Blogs = ({ blogs, handleReadTime, handleMarkRead }) => {
                         }
                         </div>
                         
-                        <a onClick={()=> handleMarkRead()} href="#" className="text-violet-800">mark as read</a>
+                        <a onClick={()=> handleMarkRead(blog)} href="#" className="text-violet-800">mark as read</a>
                        
                     </div>
                 </div>)
