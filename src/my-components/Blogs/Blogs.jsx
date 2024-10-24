@@ -1,12 +1,12 @@
 
 
-const Blogs = ({ blogs }) => {
-    console.log(blogs);
+const Blogs = ({ blogs, handleReadTime, handleMarkRead }) => {
+    // console.log(handleMarkRead);
     return (
        <div className="col-span-2" key={blogs.author_id}>
             {
                 blogs.map((blog, id) =><div className="p-5 border rounded-lg border-red-400">
-                    <img src={blog.cover_img} alt="" className="rounded-lg" />
+                    <img src={blog.cover_img} alt="" className="rounded-lg w-52" />
                     <div className="my-5 flex justify-between items-center">
                         <div className="flex items-center gap-4">
                         <img src={blog.author_img} className="w-16" alt="" />
@@ -15,8 +15,8 @@ const Blogs = ({ blogs }) => {
                             <h3>{blog.posted_date}</h3>
                         </div>
                         </div>
-                        <div className="time">{blog.reading_time}
-                            <button className="border border-blue-400 px-3 rounded-sm ml-2">click</button>
+                        <div className="time">{blog.reading_time} min read
+                            <button onClick={ () =>handleReadTime(blog)} className="border border-blue-400 px-3 rounded-sm ml-2">click</button>
                         </div>
                     </div>
                     <div className="">
@@ -27,7 +27,9 @@ const Blogs = ({ blogs }) => {
                             blog.hashtag.map((tag, idx) =><p key={idx}>{tag}</p>)
                         }
                         </div>
-                        <a href="" className="text-violet-800">mark as read</a>
+                        
+                        <a onClick={()=> handleMarkRead()} href="#" className="text-violet-800">mark as read</a>
+                       
                     </div>
                 </div>)
             }
